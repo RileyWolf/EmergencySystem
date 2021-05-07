@@ -356,8 +356,8 @@
                     })
                     if ((Date.parse(new Date()) - 172800000) < Date.parse(tdData[1])) {
                         self.locationFilters.forEach(element => {
-                            // if (tdData[4].indexOf(element) >= 0 && (tdData[3] == '車禍' || tdData[3] == '急病')) {
-                            if (tdData[4].indexOf(element) >= 0) {
+                            if (tdData[4].indexOf(element) >= 0 && (tdData[3] == '車禍' || tdData[3] == '急病')) {
+                            // if (tdData[4].indexOf(element) >= 0) {
                                 self.allData.push(
                                     {
                                         serial: number,
@@ -608,6 +608,7 @@
     .table-svg-div{
         vertical-align: middle;
         margin-left: 43px;
+        cursor: pointer; 
     }
     .table-header-div{
         border: 1px solid #E6E6E6;
